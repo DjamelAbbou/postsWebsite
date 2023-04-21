@@ -37,7 +37,7 @@ export default function HomePage({ posts = [] }) {
           onClick={() => router.push("/posts/all")}
           className="hover:scale-105 transition-all border mx-auto block border-blue-500 px-4 py-2 rounded-lg bg-blue-700 font-bold text-white"
         >
-          All posts
+          All-posts
         </button>
       </div>
     </main>
