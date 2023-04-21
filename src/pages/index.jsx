@@ -28,9 +28,11 @@ export default function HomePage({ posts = [] }) {
         </button>
       </div>
       <div className="flex mt-7 gap-5 flex-wrap justify-center items-center">
-        {posts.map((post, index) => (
-          <Post key={index} {...post} />
-        ))}
+        {posts.length !== 0 ? (
+          posts.map((post, index) => <Post key={index} {...post} />)
+        ) : (
+          <div>No posts to show</div>
+        )}
       </div>
       <div className=" pt-5">
         <button

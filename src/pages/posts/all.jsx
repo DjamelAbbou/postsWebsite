@@ -32,7 +32,7 @@ export function Post({ title, content, _id, author }) {
 
 export async function getServerSideProps(ctx) {
   const posts = await (await dbPromise)
-    .db()
+    .db("auth")
     .collection("posts")
     .find()
     .toArray();
