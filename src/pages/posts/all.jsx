@@ -2,12 +2,14 @@ import dbPromise, { jsonify } from "@/modules/db";
 import removeEmail from "@/modules/remove-email";
 import { useRouter } from "next/router";
 
-export default function Index({ posts }) {
+export default function Index({ posts = [] }) {
   return (
     <main className="flex mt-7 gap-5 flex-wrap justify-center items-center">
-      {posts.map((post, index) => (
-        <Post key={index} {...post} />
-      ))}
+      {posts.length !== 0 ? (
+        posts.map((post, index) => <Post key={index} {...post} />)
+      ) : (
+        <div>No posts to show</div>
+      )}
     </main>
   );
 }
