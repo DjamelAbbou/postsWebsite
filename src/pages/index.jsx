@@ -31,7 +31,7 @@ export default function HomePage({ posts = [] }) {
         {posts.length !== 0 ? (
           posts.map((post, index) => <Post key={index} {...post} />)
         ) : (
-          <div>No posts to show</div>
+          <div>No posts to show, be the frist to add !</div>
         )}
       </div>
       <div className=" pt-5">
