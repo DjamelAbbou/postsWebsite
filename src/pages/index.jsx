@@ -16,7 +16,7 @@ export default function HomePage({ posts = [] }) {
   const router = useRouter();
 
   return (
-    <main>
+    <main className="container mt-10 min-h-[calc(100vh_-_304px)]">
       <div>
         <button
           onClick={() =>

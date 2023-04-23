@@ -9,7 +9,7 @@ export default function SignInPage() {
 
   const { email, password } = credentials;
   return (
-    <main className="font-medium flex flex-col justify-center items-center gap-5">
+    <main className="font-medium flex flex-col justify-center items-center gap-5 min-h-[calc(100vh_-_304px)]">
       <input
         onChange={(e) =>
           setCredentials((prev) => ({

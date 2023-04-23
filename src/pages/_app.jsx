@@ -13,9 +13,31 @@ function AppWrapper({ Component, pageProps }) {
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="px-20 pt-8 space-y-16">
+    <>
       <Header />
       <Component {...pageProps} />
+      <Footer />
+    </>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="bg-gray-800 text-white mt-10">
+      <div className="container py-10 flex flex-col gap-2">
+        <div className="flex justify-center items-center">
+          <div className="inline-block mr-1 text-lg font-medium hover:text-blue-400 transition-all">
+            <Link href="/terms">Terms of Use </Link>
+          </div>
+          -
+          <div className="inline-block ml-1 font-medium text-lg hover:text-blue-400 transition-all">
+            <Link href="/policy"> Privacy Policy</Link>
+          </div>
+        </div>
+        <div className="text-gray-400 text-center text-lg font-medium">
+          Copyright © 2023 Djamel Abbou. All rights reserved.
+        </div>
+      </div>
     </div>
   );
 }
@@ -23,7 +45,7 @@ function MyApp({ Component, pageProps }) {
 export function Header() {
   const { data } = useSession();
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex items-center justify-between container py-6">
       <div className="font-bold text-2xl">Auth.</div>
       <ul className="flex gap-10">
         <li className="font-semibold text-xl text-blue-700">

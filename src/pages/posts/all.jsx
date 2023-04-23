@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Index({ posts = [] }) {
   return (
-    <main className="flex mt-7 gap-5 flex-wrap justify-center items-center">
+    <main className="flex gap-5 flex-wrap justify-center items-center container mt-10">
       {posts.length !== 0 ? (
         posts.map((post, index) => <Post key={index} {...post} />)
       ) : (

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .container {
-  --max-width: 1100px;
+  --max-width: 1150px;
 
   width: min(var(--max-width));
   margin-inline: auto;

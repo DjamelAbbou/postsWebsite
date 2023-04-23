@@ -11,7 +11,7 @@ export default function Index() {
   console.log(postDetails);
 
   return (
-    <main className="flex flex-col justify-center items-center gap-10">
+    <main className="flex flex-col justify-center items-center gap-10 container mt-10">
       <input
         placeholder="posts title"
         className="border border-gray-500 text-medium px-3 py-1 rounded-lg shadow-2xl"
